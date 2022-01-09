@@ -9,8 +9,7 @@ Quick script to explore security scan data similar to VirusTotal.
    ```
    where `data_dir` is where the `*.json` virus scan data is available locally and `save_output` is a boolean value that determines if the process results are saved.
 
-### Expected Output
-Sample output
+### Example Output
 ```
 ./process_virus_scan_data.py data True
 Processing data for /Users/jessiedaubner/dev/virus-data-eda/data/report_0.json
@@ -28,4 +27,4 @@ Saving 5 processed records to scan.csv.
 ```
 
 ## Testing
-`pytest test.py`
+`pytest`
