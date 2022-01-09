@@ -3,7 +3,7 @@
 
    Args:
      data_dir (str): directory where VirusTotal-like JSON data resides
-     save_output (bool): whether to write the processed data to a local CSV file 
+     save_output (bool): whether to write the processed data to a local CSV file
 
    Usage:
      python process_virus_scan_data.py <data_dir> True/False
@@ -13,7 +13,6 @@ import os
 import json
 import pytz
 import typer
-import smart_open
 import pandas as pd
 from datetime import datetime
 
