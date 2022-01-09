@@ -17,12 +17,12 @@ license = {text = "MIT"}
 [tool]
 
 [tool.pdm]
-test = "pytest tests/"
+test = "pytest test.py"
 lint = "pre-commit run --all-files"
 
 [tool.isort]
 profile = "black"
-known_third_party = []
+known_third_party = ["typer"]
 
 [tool.black]
 line-length = 88
@@ -40,6 +40,7 @@ exclude = '''
   | dist
   | pdm/_vendor
   | tests/fixtures
+  | __pypackages__/* 
 )/
 '''
 
