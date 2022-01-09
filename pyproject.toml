@@ -1,0 +1,56 @@
+[project]
+name = "explore-virus-data"
+version = "0.1"
+description = "Script to explore virus scan data"
+authors = [
+    {name = "Jess Daubner", email = "jessiedaubner@gmail.com"},
+]
+dependencies = [
+    "smart-open>=5.2.1",
+    "pandas>=1.3.5",
+    "pytz>=2021.3",
+]
+requires-python = ">=3.9"
+license = {text = "MIT"}
+
+[project.optional-dependencies]
+[tool]
+
+[tool.pdm]
+test = "pytest tests/"
+lint = "pre-commit run --all-files"
+
+[tool.isort]
+profile = "black"
+known_third_party = []
+
+[tool.black]
+line-length = 88
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | pdm/_vendor
+  | tests/fixtures
+)/
+'''
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest>=6.2.5",
+    "black>=21.12b0",
+    "isort>=5.10.1",
+    "pre-commit>=2.16.0",
+]
+
+[build-system]
+requires = ["pdm-pep517"]
+build-backend = "pdm.pep517.api"

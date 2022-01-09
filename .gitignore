@@ -1,0 +1,11 @@
+# pdm and venv
+.pdm.toml
+pdm.lock
+__pypackages__/
+venv
+
+# python 
+__pycache__/
+
+# data
+data
